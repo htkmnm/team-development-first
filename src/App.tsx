@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
+//sakuragimaaya
 function App() {
   return (
     <div className="App">
