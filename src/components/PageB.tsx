@@ -29,7 +29,7 @@ const PageB = () => {
         <div>
             <h1>今日のおみくじ</h1>
 
-            <button onClick={omikujihand}>占う</button>
+            <button onClick={omikujihand}>今日の占い</button>
             {omikuji}
         </div>
     );
