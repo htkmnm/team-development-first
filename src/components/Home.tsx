@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Navbar, Nav, NavDropdown, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home: React.FC<{}> = () => {
@@ -13,23 +13,22 @@ const Home: React.FC<{}> = () => {
 
     return (
         <div>
-            <h1>Home</h1>
-            <br />
-            <Form.Group controlId="formBasicEmail">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="name" placeholder="name" value={name} onChange={e => setName(e.target.value)} />
-            </Form.Group>
-            <Button variant="primary" type="submit" onClick={handleClick}>Button</Button>
-            <br />
+            <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">Hoom</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="PageA">PageA</Nav.Link>
+                        <Nav.Link href="PageB">PageB</Nav.Link>
+                    </Nav>
+                    <FormControl type="name" placeholder="name" className="mr-sm-2" value={name} onChange={e => setName(e.target.value)} />
+                    <Button variant="outline-success" type="submit" onClick={handleClick}>WELCOM</Button>
+                </Navbar.Collapse>
+            </Navbar>
             <br />
             {
                 value ? <h1>{value}さん、ようこそ！！</h1> : ""
             }
-            <br />
-            <Link to="PageA">PageA</Link> /
-            <Link to="PageB">PageB</Link> /
-            <Link to="Home">Homeに戻る</Link><br />
-            <br />
         </div>
     );
 };
