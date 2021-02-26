@@ -15,12 +15,23 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
 export const db = firebase.firestore();
 
-//const userPlus = () => {
-
-//}
+const userPlus = await () => {
+    db
+        // Add a new document with a generated id.
+        .collection('user')
+        .add({
+            first: 'Ada',
+            last: 'Lovelace',
+            born: 1815,
+        })
+        .then(function (docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function (error) {
+            console.error("Error adding document: ", error);
+        });
+};
 
 export default firebase;
