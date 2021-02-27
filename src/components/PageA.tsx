@@ -10,7 +10,9 @@ const PageA: React.FC<{}> = () => {
     useEffect(() => {
         Axios.get('https://jsonplaceholder.typicode.com/users')
             .then((res) => {
-                setData(res.data);
+                let kisuu = res.data;
+                const result = kisuu.filter((a: any) => a.id % 2 === 1);
+                setData(result)
             });
     }, []);
 
