@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { DataType } from '../types/DataType';
 import '../App.css';
+import Header from "./Header"
 
-const App = () => {
+const PageA: React.FC<{}> = () => {
     const [data, setData] = useState<DataType>([]);
 
     useEffect(() => {
@@ -15,6 +16,7 @@ const App = () => {
 
     return (
         <div>
+            <Header />
             <h1>PageA</h1>
             <table>
                 <thead>
@@ -38,4 +40,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default PageA;
