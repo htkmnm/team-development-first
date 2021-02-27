@@ -1,21 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
+import { DataType } from '../types/DataType';
+import '../App.css';
 
-/**
- * PageA画面
- * API取得
- * 感想
- * > この画面はアプリのViewを作成する上で、最も大切なJavaScriptの操作方法を学んでいただいております。
- *   難易度はかなり高めですが、がんばってください！
- * @author hatuki
- */
-const PageA: React.FC<{}> = () => {
-  return (
-    <div>
-      <h1>PageA</h1>
-      <Link to="PageB">PageB</Link> /<Link to="Home">Homeへ戻る</Link>
-    </div>
-  );
+const App = () => {
+    const [data, setData] = useState<DataType>([]);
+
+    useEffect(() => {
+        Axios.get('https://jsonplaceholder.typicode.com/users')
+            .then((res) => {
+                setData(res.data);
+            });
+    }, []);
+
+    return (
+        <div>
+            <h1>PageA</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((element, index) => {
+                        return (
+                            <tr key={index}>
+                                <td>{element.id}</td>
+                                <td>{element.name}</td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+        </div>
+    );
 };
 
-export default PageA;
+export default App;
