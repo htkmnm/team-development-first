@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -43,6 +44,13 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/react-router-dom": "^5.1.7"
+=======
+    "@types/react-router-dom": "^5.1.7",
+    "bootstrap": "^4.6.0",
+    "react-bootstrap": "^1.4.3",
+    "react-router-dom": "^5.2.0"
+>>>>>>> c71eac4eee403d58f855be9b33207775754fcc47
   }
 }
