@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { DataType } from '../types/DataType';
 import '../App.css';
 
-const App = () => {
+const PageA: React.FC<{}> = () => {
     const [data, setData] = useState<DataType>([]);
 
     useEffect(() => {
@@ -38,4 +38,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default PageA;
