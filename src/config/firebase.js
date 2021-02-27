@@ -1,4 +1,4 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 import "firebase/firestore";
 import "firebase/auth";
 
@@ -17,10 +17,10 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 export const db = firebase.firestore();
 
-const userPlus = await () => {
-    db
+const userPlus = async () => {
+    await db
         // Add a new document with a generated id.
-        .collection('user')
+        .collection('users')
         .add({
             first: 'Ada',
             last: 'Lovelace',
