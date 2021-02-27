@@ -17,15 +17,15 @@ import PageB from './components/PageB';
  * @author hatuki
  */
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/PageA" component={PageA} />
-        <Route exact path="/PageB" component={PageB} />
-      </Switch>
-    </Router>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/PageA" component={PageA} />
+                <Route exact path="/PageB" component={PageB} />
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
