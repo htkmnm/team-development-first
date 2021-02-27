@@ -10,8 +10,8 @@ import Header from "./Header"
  *   あとはPageBのところにPageB: React.FC<{}>とすると、後々の実装が楽になります！
  * @author hatuki
  */
-const PageB = () => {
-  const [omikuji, setOmikuji] = useState<string>('');
+const PageB: React.FC<{}> = () => {
+    const [omikuji, setOmikuji] = useState<string>('');
 
   const omikujihand = () => {
     const num = Math.floor(Math.random() * 6);
