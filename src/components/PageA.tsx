@@ -4,7 +4,7 @@ import { DataType } from '../types/DataType';
 import '../App.css';
 import Header from "./Header"
 
-const App = () => {
+const PageA: React.FC<{}> = () => {
     const [data, setData] = useState<DataType>([]);
 
     useEffect(() => {
@@ -40,4 +40,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default PageA;
