@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Header from "./Header"
 
 /**
  * PageB画面
@@ -32,6 +33,7 @@ const PageB = () => {
   };
   return (
     <div>
+      <Header />
       <h1>今日のおみくじ</h1>
       <button onClick={omikujihand}>今日の占い</button>
       {omikuji}
