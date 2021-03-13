@@ -19,6 +19,7 @@ const Login = () => {
         await googleLogin()
         console.log('Google Login Start')
     }
+
     return (
         <div>
             <Header />
@@ -31,8 +32,8 @@ const Login = () => {
             <button onClick={handleGoogle}>GoogleLogin</button>
         </div>
     )
-}
+};
 
 
-export default Login
+export default Login;
 
