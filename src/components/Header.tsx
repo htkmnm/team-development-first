@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { Button, Form, Navbar, Nav, NavDropdown, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SimpleModal from "./SimpleModal"
+
+
 
 /**
  * Home画面
@@ -15,10 +18,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header: React.FC<{}> = () => {
     const [name, setName] = useState('');
     const [value, setValue] = useState('');
+    const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
         setValue(name);
     };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+
+    }
 
     return (
         <div>
@@ -33,6 +46,7 @@ const Header: React.FC<{}> = () => {
                     </Nav>
                     <FormControl type="name" placeholder="name" className="mr-sm-2" value={name} onChange={e => setName(e.target.value)} />
                     <Button variant="outline-success" type="submit" onClick={handleClick}>WELCOM</Button>
+                    <SimpleModal />
                 </Navbar.Collapse>
             </Navbar>
             <br />
@@ -41,6 +55,6 @@ const Header: React.FC<{}> = () => {
             }
         </div>
     );
-};
+}
 
-export default Header;
+export default Header
