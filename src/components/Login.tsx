@@ -1,6 +1,6 @@
-import React from 'react'
-import { useState } from 'react'
-import firebase from '../config/firebase'
+import React from 'react';
+import { useState } from 'react';
+import firebase from '../config/firebase';
 
 
 const Login = () => {
@@ -13,8 +13,8 @@ const Login = () => {
             .then(() => {
                 // Signed in
                 // ...
-            })
-    }
+            });
+    };
 
 
     return (
@@ -25,7 +25,7 @@ const Login = () => {
             <h1>Login</h1>
         </div>
     )
-}
+};
 
 
 export default Login
