@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { DataType } from '../types/DataType';
 import '../App.css';
-import Header from "./Header"
+import Header from "./Header";
 
 const PageA: React.FC<{}> = () => {
     const [data, setData] = useState<DataType>([]);

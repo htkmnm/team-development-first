@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Header from "./Header"
+import Header from "./Header";
 
 /**
  * PageB画面
@@ -11,7 +11,7 @@ import Header from "./Header"
  * @author hatuki
  */
 const PageB: React.FC<{}> = () => {
-    const [omikuji, setOmikuji] = useState<string>('');
+  const [omikuji, setOmikuji] = useState<string>('');
 
   const omikujihand = () => {
     const num = Math.floor(Math.random() * 6);

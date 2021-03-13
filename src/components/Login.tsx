@@ -14,6 +14,7 @@ const Login = () => {
         await userPlus()
         console.log('fin')
     }
+    
     return (
         <div>
             <Header />
@@ -25,8 +26,8 @@ const Login = () => {
             <h1>Login</h1>
         </div>
     )
-}
+};
 
 
-export default Login
+export default Login;
 
