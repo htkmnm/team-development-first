@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { TextField } from '@material-ui/core';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header"
-import { userPlus } from '../config/firebase'
+import { userPlus, googleLogin } from '../config/firebase'
 
 const Login = () => {
 
@@ -14,6 +14,11 @@ const Login = () => {
         await userPlus()
         console.log('fin')
     }
+
+    const handleGoogle = async () => {
+        await googleLogin()
+        console.log('Google Login Start')
+    }
     return (
         <div>
             <Header />
@@ -23,6 +28,7 @@ const Login = () => {
             </form>
             <button onClick={handleClick}> CreateUser</button>
             <h1>Login</h1>
+            <button onClick={handleGoogle}>GoogleLogin</button>
         </div>
     )
 }
