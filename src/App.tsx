@@ -8,6 +8,8 @@ import './App.css';
 import Home from './components/Home';
 import PageA from './components/PageA';
 import PageB from './components/PageB';
+import Login from './components/Login';
+
 
 /**
  * ナビゲーションを管理
@@ -17,15 +19,16 @@ import PageB from './components/PageB';
  * @author hatuki
  */
 function App() {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/PageA" component={PageA} />
-                <Route exact path="/PageB" component={PageB} />
-            </Switch>
-        </Router>
-    );
-};
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/PageA" component={PageA} />
+        <Route exact path="/PageB" component={PageB} />
+        <Route exact path="/Login" component={Login} />
+      </Switch>
+    </Router>
+  );
+}
 
 export default App;

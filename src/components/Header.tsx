@@ -29,6 +29,7 @@ const Header: React.FC<{}> = () => {
                     <Nav className="mr-auto">
                         <Nav.Link href="PageA">PageA</Nav.Link>
                         <Nav.Link href="PageB">PageB</Nav.Link>
+                        <Nav.Link href="Login">Login</Nav.Link>
                     </Nav>
                     <FormControl type="name" placeholder="name" className="mr-sm-2" value={name} onChange={e => setName(e.target.value)} />
                     <Button variant="outline-success" type="submit" onClick={handleClick}>WELCOM</Button>
